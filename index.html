@@ -8,7 +8,7 @@
 <script>
 fetch('link.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{
   var to=location.hash==='#admin'?d.admin:d.chat;
-  if(/^https:\/\/[a-z0-9-]+\.trycloudflare\.com(\/chat)?$/.test(to)) location.replace(to);
+  if(/^https:\/\/(?!api\.)[a-z0-9-]+\.(trycloudflare\.com|lhr\.life)(\/chat)?$/.test(to)) location.replace(to);
   else throw 0;
 }).catch(function(){document.getElementById('m').textContent='ระบบทดลองปิดอยู่ตอนนี้ ลองใหม่อีกครั้งภายหลังนะคะ';});
 </script></body></html>
