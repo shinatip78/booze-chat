@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>คุยกับน้องบูซ · BOOZE</title>
+<meta name="robots" content="noindex">
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0b0d12;color:#e8eaf0;font-family:system-ui,sans-serif;text-align:center;padding:16px}p{opacity:.7}</style>
+</head><body><div><h1>กำลังเปิดแชตกับน้องบูซ…</h1><p id="m">รอสักครู่นะคะ</p></div>
+<script>
+fetch('link.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  var to=location.hash==='#admin'?d.admin:d.chat;
+  if(/^https:\/\/[a-z0-9-]+\.trycloudflare\.com(\/chat)?$/.test(to)) location.replace(to);
+  else throw 0;
+}).catch(function(){document.getElementById('m').textContent='ระบบทดลองปิดอยู่ตอนนี้ ลองใหม่อีกครั้งภายหลังนะคะ';});
+</script></body></html>
